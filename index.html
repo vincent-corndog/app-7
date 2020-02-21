@@ -69,15 +69,16 @@ var docMod = document.lastModified;
             migraine_count = migraine_count + 1;
         }
 
-//Made a function for resuts as awll as a variable for results, so that it can display the results once all the questions have been answered, to determine the probability of whether you have a heacache, or a migraine. I can not find out how to get results that calculate the percentage, however it only shows the probablitiy of having a headache or migraine (for ex prob for headache=2 and prob for migraine= 4)
+//Made a function for results as aswll as a variable for results, so that it can display the results once all the questions have been answered, to determine the probability of whether you have a headache, or a migraine. I can not find out how to get results that calculate the percentage, however it only shows the probablitiy of having a headache or migraine (for ex prob for headache=2 and prob for migraine= 4)
 
         function results(){
             var resultText = document.getElementById("results");
-            resultText.innerHTML = "Probability it is allergies =" + headache_count + "<br> Probability it is a migraine =" + migraine_count; 
+            resultText.innerHTML = "Probability it is headache =" + headache_count + "<br> Probability it is a migraine =" + migraine_count; 
           }
 
 
 //I used the "w3schools" website and used the HTML Images Syntax, and used the code <img> src="url" and plugged in the photo url into the spot where it says url. the img tag is what shows up the img, and the src attribute specifies the URL web address for the image. The image is not popping up -->
+// Relooked at how to input an image, and I have to put it in the body, not in the style section of the coding. 	
 
   </script>
 
@@ -88,6 +89,11 @@ var docMod = document.lastModified;
      margin: 0em;
 }
 
+<h2>HTML Image</h2>
+<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+	
+	
+	
 <img src="https://www.dailynews.lk/sites/default/files/news/2018/04/22/z_p28-That-01.jpg">
 
 
@@ -115,8 +121,15 @@ img, object{
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>Headache or Migraine?</h1>
 </div>
+
+
+<h2>HTML Image</h2>
+<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+
+
+</div>	
 	
 <div id="content" class="w3-container">
 	<p>Are you feeling like you might have a headache but wonder if it is a migraine? Answer a few short questions to find out!</p>

@@ -52,10 +52,10 @@ blah, blah, blah, blah
 <script>
 
   //When a button is clicked on either "yes" or "no", the funtions will remember and add +1 to when the button is clicked, and the data will be displayed at the end wih the "results" function.
-        var allergy_count = 0;
-        var cold_count = 0;
-                function allergyAdd(){
-            allergy_count = allergy_count + 1;
+        var headache_count = 0;
+        var migraine_count = 0;
+                function headacheAdd(){
+            headache_count = headache_count + 1;
 		
 
 
@@ -65,19 +65,19 @@ var docMod = document.lastModified;
 
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
+        function migraineAdd(){
+            migraine_count = migraine_count + 1;
         }
 
-//Made a function for resuts as awll as a variable for results, so that it can display the results once all the questions have been answered, to determine the probability of whether you have allergies, or a cold. I can not find out how to get results that calculate the percentage, however it only shows the probablitiy of having a cold or allergies (for ex prob for cold=2 and prob for allergy= 4)
+//Made a function for resuts as awll as a variable for results, so that it can display the results once all the questions have been answered, to determine the probability of whether you have a heacache, or a migraine. I can not find out how to get results that calculate the percentage, however it only shows the probablitiy of having a headache or migraine (for ex prob for headache=2 and prob for migraine= 4)
 
         function results(){
             var resultText = document.getElementById("results");
-            resultText.innerHTML = "Probability it is allergies =" + allergy_count + "<br> Probability it is a cold =" + cold_count; 
+            resultText.innerHTML = "Probability it is allergies =" + headache_count + "<br> Probability it is a migraine =" + migraine_count; 
           }
 
 
-//I used the "w3schools" website and used the HTML Images Syntax, and used the code <img> src="url" and plugged in the photo url into the spot where it says url. the img tag is what shows up the img, and the src attribute specifies the URL web address for the image. -->
+//I used the "w3schools" website and used the HTML Images Syntax, and used the code <img> src="url" and plugged in the photo url into the spot where it says url. the img tag is what shows up the img, and the src attribute specifies the URL web address for the image. The image is not popping up -->
 
   </script>
 
@@ -119,7 +119,7 @@ img, object{
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Are you feeling like you might have a headache but wonder if it is a migraine? Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
@@ -133,9 +133,9 @@ img, object{
 	</div>
 	
     	<div id="content" class="w3-container">
-  <p>Are your eyes watery or itchy?</p>    
-  <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-  <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+  <p>Are you sensitive to light and/or sound?</p>    
+  <a href="#two"  onclick="migraineAdd();" class="w3-btn w3-black"> Yes</a>
+  <a href="#two"  onclick="headacheAdd();" class="w3-btn w3-black">No</a>
  </div><!-- /content -->
 
     	</div> 
@@ -148,14 +148,14 @@ img, object{
   </div>
   
       <div id="content" class="w3-container">
-  <p>Do you have a fever?</p>    
-  <a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-  <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+  <p>Do you feel like vommiting or have nausea?</p>    
+  <a href="#three"  onclick="migraineAdd();" class="w3-btn w3-black"> Yes</a>
+  <a href="#three"  onclick="headacheAdd();" class="w3-btn w3-black">No</a>
  </div><!-- /content -->
 
       </div> 
 
-<!-- I copy and pasted the rest of the questions underneath the question 1 and 2, but what I did differently for each one was make sure to chnage the question, the id for chronological purposes, and I also made the href the next #, that way it will change the page to the next page. -->
+<!--I just copy and pasted the same code for App3, all I did was change all the allergy coding to headache, and the cold coding for migraine, and changed the questions with my new quetions for whether you have a headache or a migraine, and changed them accordingly to fit. -->
 
 </div>	
 
@@ -165,9 +165,9 @@ img, object{
   </div>
   
       <div id="content" class="w3-container">
-  <p>Do you have a sore throat?</p>    
-  <a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-  <a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+  <p>Do you have pain behind one eye or ear?</p>    
+  <a href="#four"  onclick="migraineAdd();" class="w3-btn w3-black"> Yes</a>
+  <a href="#four"  onclick="headacheAdd();" class="w3-btn w3-black">No</a>
  </div><!-- /content -->
 
       </div> 
@@ -177,38 +177,37 @@ img, object{
     <h1>Question 4</h1>
   </div>
   
-<!-- For this question, I changed the ""class=w3-btn w3-black">" to seasonal for yes, and chronic for no, because otherwise the question would not make sense." -->
 
       <div id="content" class="w3-container">
-  <p>Are your symptoms seasonal or chronic?</p>    
-  <a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black">Seasonal</a>
-  <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">Chronic</a>
+  <p>Do you have pain behind the temples</p>    
+  <a href="#five"  onclick="migraineAdd();" class="w3-btn w3-black">Yes</a>
+  <a href="#five"  onclick="headacheAdd();" class="w3-btn w3-black">No</a>
  </div><!-- /content -->
 
-<!-- This is my question that I put in for the cold question, and I just copy and pasted the previous questions and just changed the numbers, the the question context. -->
+
       </div>       <div class="page" id="five">
   <div id="header" class="w3-container w3-flat-carrot">
     <h1>Question 5</h1>
   </div>
   
       <div id="content" class="w3-container">
-  <p>Do you have body aches?</p>    
-  <a href="#six"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-  <a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+  <p>Do you see spots of flashing lights?</p>    
+  <a href="#six"  onclick="migraineAdd();" class="w3-btn w3-black"> Yes</a>
+  <a href="#six"  onclick="headacheAdd();" class="w3-btn w3-black">No</a>
  </div><!-- /content -->
 
 
 </div>  
-<!-- This is my question that I put in for the allergy question, and I just copy and pasted the previous questions and just changed the numbers, the the question context. -->
+
 <div class="page" id="six">
   <div id="header" class="w3-container w3-flat-carrot">
     <h1>Question 6</h1>
   </div>
   
       <div id="content" class="w3-container">
-  <p>Are these symptoms triggered by dust mites, animal dander, or food?</p>    
-  <a href="#seven"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-  <a href="#seven"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+  <p>Are you having temporary vision loss?</p>    
+  <a href="#seven"  onclick="migraineAdd();" class="w3-btn w3-black"> Yes</a>
+  <a href="#seven"  onclick="headacheAdd();" class="w3-btn w3-black">No</a>
  </div><!-- /content -->
 
       </div> 

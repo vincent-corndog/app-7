@@ -21,11 +21,218 @@ blah, blah, blah,
  
 Known Issues:
 blah, blah, blah, blah
+
+
+// The following code lets you know when the file was last modified.
+// This will help you know if you are looking at the new version of the file or if there is a delay on GitHub.
+       var docMod = document.lastModified;
+       alert("This file last modified  " + docMod);
+       console.log("This file last modified  " + docMod);
+// If you find the alert box annoying, comment out that line and timestamp will still show up in the debugging console
+
+
+
+       var docMod = document.lastModified;
+       alert("This file last modified  " + docMod);
+       console.log("This file last modified  " + docMod);
+
 -->
 
    <head> 
       
-	   PUT YOUR OLD CODE IN HERE
+	    <head> 
+      <title>Hello World</title>  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <link rel="stylesheet" href="w3.css">
+      <link rel="stylesheet" href="w3-colors-flat.css">
+   </head> 
+
+
+<script>
+
+  //When a button is clicked on either "yes" or "no", the funtions will remember and add +1 to when the button is clicked, and the data will be displayed at the end wih the "results" function.
+        var allergy_count = 0;
+        var cold_count = 0;
+                function allergyAdd(){
+            allergy_count = allergy_count + 1;
+		
+
+
+var docMod = document.lastModified;
+       alert("This file last modified  " + docMod);
+       console.log("This file last modified  " + docMod);
+
+        }
+
+        function coldAdd(){
+            cold_count = cold_count + 1;
+        }
+
+//Made a function for resuts as awll as a variable for results, so that it can display the results once all the questions have been answered, to determine the probability of whether you have allergies, or a cold. I can not find out how to get results that calculate the percentage, however it only shows the probablitiy of having a cold or allergies (for ex prob for cold=2 and prob for allergy= 4)
+
+        function results(){
+            var resultText = document.getElementById("results");
+            resultText.innerHTML = "Probability it is allergies =" + allergy_count + "<br> Probability it is a cold =" + cold_count; 
+          }
+
+
+//I used the "w3schools" website and used the HTML Images Syntax, and used the code <img> src="url" and plugged in the photo url into the spot where it says url. the img tag is what shows up the img, and the src attribute specifies the URL web address for the image. -->
+
+  </script>
+
+
+
+<style>	
+.body {
+     margin: 0em;
+}
+
+<img src="https://www.dailynews.lk/sites/default/files/news/2018/04/22/z_p28-That-01.jpg">
+
+
+img, object{
+            	max-height:90%;
+        		max-width:90%;
+        	}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<body>
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>Cold or Allergies?</h1>
+</div>
+	
+<div id="content" class="w3-container">
+	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
+<div class="page" id="one">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 1</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+  <p>Are your eyes watery or itchy?</p>    
+  <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+  <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+ </div><!-- /content -->
+
+    	</div> 
+	
+</div>
+
+<div class="page" id="two">
+  <div id="header" class="w3-container w3-flat-carrot">
+    <h1>Question 2</h1>
+  </div>
+  
+      <div id="content" class="w3-container">
+  <p>Do you have a fever?</p>    
+  <a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+  <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+ </div><!-- /content -->
+
+      </div> 
+
+<!-- I copy and pasted the rest of the questions underneath the question 1 and 2, but what I did differently for each one was make sure to chnage the question, the id for chronological purposes, and I also made the href the next #, that way it will change the page to the next page. -->
+
+</div>	
+
+<div class="page" id="three">
+  <div id="header" class="w3-container w3-flat-carrot">
+    <h1>Question 3</h1>
+  </div>
+  
+      <div id="content" class="w3-container">
+  <p>Do you have a sore throat?</p>    
+  <a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+  <a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+ </div><!-- /content -->
+
+      </div> 
+
+      <div class="page" id="four">
+  <div id="header" class="w3-container w3-flat-carrot">
+    <h1>Question 4</h1>
+  </div>
+  
+<!-- For this question, I changed the ""class=w3-btn w3-black">" to seasonal for yes, and chronic for no, because otherwise the question would not make sense." -->
+
+      <div id="content" class="w3-container">
+  <p>Are your symptoms seasonal or chronic?</p>    
+  <a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black">Seasonal</a>
+  <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">Chronic</a>
+ </div><!-- /content -->
+
+<!-- This is my question that I put in for the cold question, and I just copy and pasted the previous questions and just changed the numbers, the the question context. -->
+      </div>       <div class="page" id="five">
+  <div id="header" class="w3-container w3-flat-carrot">
+    <h1>Question 5</h1>
+  </div>
+  
+      <div id="content" class="w3-container">
+  <p>Do you have body aches?</p>    
+  <a href="#six"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+  <a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+ </div><!-- /content -->
+
+
+</div>  
+<!-- This is my question that I put in for the allergy question, and I just copy and pasted the previous questions and just changed the numbers, the the question context. -->
+<div class="page" id="six">
+  <div id="header" class="w3-container w3-flat-carrot">
+    <h1>Question 6</h1>
+  </div>
+  
+      <div id="content" class="w3-container">
+  <p>Are these symptoms triggered by dust mites, animal dander, or food?</p>    
+  <a href="#seven"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+  <a href="#seven"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+ </div><!-- /content -->
+
+      </div> 
+<!-- This next code only has one button that is used to display the results, and clicking this button ativates the results funtion that has the code and variables for getting the probability of having a cold and or allergy (see java script above for what the button activates)-->
+      </div>       
+    <div class="page" id="seven">
+  <div id="header" class="w3-container w3-flat-carrot">
+    <h1>Results</h1>
+  </div>
+    <a href="#seven"  onclick="results();" class="w3-btn w3-black">Click Here to Display Results</a>
+    <p id="results"></p>  
+ 
+  
+      </div> 
+      
+</div>  
+      
+</div>  
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+</body>
+</html>
 	   
    </body>
 </html>

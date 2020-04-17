@@ -144,7 +144,7 @@ img, object{
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a headache but wonder if it is a migraine? Answer a few short questions to find out!</p>
+	<p>With the Covid-19 Pandemic amongst us, do you feel like you might be displaying symptoms of the virus? Take this short quiz to find out if you possibly have Covid-19.</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
@@ -160,11 +160,13 @@ img, object{
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
 	</div>
-	
+	<!--Changed the onclicks to the 4 varaibles, and adjusted the buttons to the correct days the symptoms will last. I am also using this guide as a reference: https://www.aafa.org/media/2631/respiratory-illness-symptoms-chart-coronavirus-flu-cold-allergies.png -->
     	<div id="content" class="w3-container">
-  <p>Are you sensitive to light and/or sound?</p>    
-  <a href="#two"  onclick="migraineAdd();" class="w3-btn w3-black"> Yes</a>
-  <a href="#two"  onclick="headacheAdd();" class="w3-btn w3-black">No</a>
+  <p>How long have your symptoms lasted for?</p>    
+  <a href="#two"  onclick="Covid19Add();" class="w3-btn w3-black">7-25 days</a>
+  <a href="#two"  onclick="ColdAdd();" class="w3-btn w3-black">Less than 14 days</a>
+  <a href="#two"  onclick="FluAdd();" class="w3-btn w3-black"> 7-14 days</a>
+  <a href="#two"  onclick="SeasonalAllgergiesAdd();" class="w3-btn w3-black">Several Weeks</a>		
  </div><!-- /content -->
 
     	</div> 

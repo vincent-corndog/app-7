@@ -52,10 +52,14 @@ blah, blah, blah, blah
 <script>
 
   //When a button is clicked on either "yes" or "no", the funtions will remember and add +1 to when the button is clicked, and the data will be displayed at the end wih the "results" function.
-        var headache_count = 0;
-        var migraine_count = 0;
-                function headacheAdd(){
-            headache_count = headache_count + 1;
+  // replacing headache and migraine with Covid-19, Cold, Flu, and Seasonal Allergies.	
+        var Covid19_count = 0;
+        var Cold_count = 0;
+	var Flu_count = 0;
+	var SeasonalAllgergies_count = 0;
+	
+                function Covid19Add(){
+            Covid19_count = Covid19_count + 1;
 		
 
 
@@ -65,15 +69,26 @@ var docMod = document.lastModified;
 
         }
 
-        function migraineAdd(){
-            migraine_count = migraine_count + 1;
+        function ColdAdd(){
+            Cold_count = Cold_count + 1;
+        }
+	
+	}
+
+        function FluAdd(){
+            Flu_count = Flu_count + 1;
+        }
+	}
+
+        function SeasonalAllgergiesAdd(){
+            SeasonalAllgergies_count = SeasonalAllgergies_count + 1;
         }
 
-//Made a function for resuts as awll as a variable for results, so that it can display the results once all the questions have been answered, to determine the probability of whether you have a heacache, or a migraine. I can not find out how to get results that calculate the percentage, however it only shows the probablitiy of having a headache or migraine (for ex prob for headache=2 and prob for migraine= 4)
+//Made a function for resuts as aswll as a variable for results, so that it can display the results once all the questions have been answered, to determine the probability of whether you have a heacache, or a migraine. I can not find out how to get results that calculate the percentage, however it only shows the probablitiy of having a headache or migraine (for ex prob for headache=2 and prob for migraine= 4)
 
         function results(){
             var resultText = document.getElementById("results");
-            resultText.innerHTML = "Probability it is headache =" + headache_count + "<br> Probability it is a migraine =" + migraine_count; 
+            resultText.innerHTML = "Probability it is Covid19 =" + Covid19_count + "<br> Probability it is a Cold =" + Cold_count + "<br> Probability it is a Flu =" + Flu_count + "<br> Probability it is SeasonalAllgergies =" + SeasonalAllgergies_count; 
           }
 
 
